@@ -1,24 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>BluBandtt</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet" />
   <style>
+    /* Basic Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Arial;
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-      background-color: #a4bfeb;
-      color: #333
+      font-family: 'DM Serif Text', serif;
+      background-color: #f0f4f8;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1rem;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 0.2rem;
+      letter-spacing: 2px;
+      color: #1a237e; /* deep blue */
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #3f51b5;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    button {
+      background-color: #3949ab; /* nice blue */
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-family: 'DM Serif Text', serif;
+    }
+
+    button:hover {
+      background-color: #283593;
     }
   </style>
 </head>
 <body>
   <h1>BluBandtt</h1>
-  <h2>Porfolio</h2>
+  <h2>Commissions</h2>
 
-   <div class="project">
-    <h2>🎨 Project 1 Title</h2>
-    <p>Short description of the project. Maybe what tools you used or what inspired it.</p>
+  <div class="button-container">
+    <button onclick="navigate('portfolio')">Portfolio</button>
+    <button onclick="navigate('prices')">Prices</button>
+    <button onclick="navigate('faq')">FAQ</button>
   </div>
+
+  <script>
+    function navigate(page) {
+      // Replace with your page URLs or anchors
+      alert('Navigate to ' + page);
+      // For example:
+      // window.location.href = page + '.html';
+    }
+  </script>
+</body>
+</html>
