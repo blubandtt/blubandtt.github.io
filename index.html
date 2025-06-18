@@ -37,6 +37,16 @@
       font-weight: 400;
     }
 
+    .box {
+      background-color: white;
+      max-width: 500px;
+      margin: 4rem auto;      /* centers horizontally, with vertical margin */
+      padding: 2rem 3rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
     .button-container {
       display: flex;
       gap: 1.5rem;
@@ -51,24 +61,27 @@
       font-size: 1.2rem;
       border-radius: 30px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
       font-family: 'DM Serif Text', serif;
+      transition: transform 0.3s ease, background-color 0.3s ease;
 
     }
 
     button:hover {
       background-color: #283593;
+      transform: scale(1.1);
     }
   </style>
 </head>
 <body>
-  <h1>BluBandtt</h1>
-  <h2>Commissions</h2>
+  <div class="box">
+    <h1>BluBandtt</h1>
+    <h2>Commissions</h2>
 
-  <div class="button-container">
-    <button onclick="navigate('portfolio')">Portfolio</button>
-    <button onclick="navigate('prices')">Prices</button>
-    <button onclick="navigate('faq')">FAQ</button>
+    <div class="button-container">
+      <button onclick="navigate('portfolio')">Portfolio</button>
+      <button onclick="navigate('prices')">Prices</button>
+      <button onclick="navigate('faq')">FAQ</button>
+    </div>
   </div>
 
    <script>
